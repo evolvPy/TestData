@@ -1,0 +1,16 @@
+state_code_file: 
+ file_type: xlsx
+ file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\StateCode.xlsx
+ 
+party_data_file:
+ file_type: xlsx
+ file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\Party.xlsx
+ 
+TrizettoORG:
+ file_type: csv
+ file_name: TPSOrganization
+ col_num:15
+ columnname:
+  col1: OrgIdentifier:string:4
+  col2: Name:string:30
+  col3: ParentOrgIdentifier:string:4
