@@ -1,16 +1,52 @@
 state_code_file: 
- file_type: xlsx
- file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\StateCode.xlsx
+    file_type: xlsx
+    file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\StateCode.xlsx
  
 party_data_file:
- file_type: xlsx
- file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\Party.xlsx
+    file_type: xlsx
+    file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\Party.xlsx
  
 TrizettoORG:
- file_type: csv
- file_name: TPSOrganization
- col_num:15
- columnname:
-  col1: OrgIdentifier:string:4
-  col2: Name:string:30
-  col3: ParentOrgIdentifier:string:4
+    file_type: csv
+    file_name: TPSOrganization
+    seed_file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\Party.xlsx
+    col_num: 15
+    columnname:
+        col1: OrgIdentifier:string:4:NOTNULL:AUTO_INT
+        col2: Name:string:30:NOTNULL:Company
+        col3: ParentOrgIdentifier:string:4:NULL:NA
+        col4: ParentOrgName:string:30:NULL:NA
+        col5: TaxIdentifier:string:10:NOTNULL:AUTO_TAX
+        col6: StatusCode:string:10:NOTNULL:FUNC(ACTIVE,TERMED,SUSPENDED)
+        col7: AddressLine1:string:30:NOTNULL:Street_Address
+        col8: AddressLine2:string:30:NULL:NA
+        col9: City:string:40:NOTNULL:City
+        col10: State:string:2:NOTNULL:State
+        col11: Zip:string:10:NOTNULL:Zip_Code
+        col12: Phone:string:12:NULL:Phone_Number
+        col13: Email:string:50:NULL:Email
+        col14: ContactName:string:25:NULL:CONCAT(First_Name,Middle_Initials,Last_Name)
+        col15: RecordCreationDate:timestamp:19:NOTNULL:AUTO_TIMESTAMP
+
+TrizettoProvider:
+    file_type: csv
+    file_name: TPSProvider
+    seed_file_name: C:\Users\Somnath\PycharmProjects\TestDataGenerator\Data\Party.xlsx
+    col_num: 18
+    columnname:
+        col1: OrgIdentifier:string:4:NOTNULL:AUTO_INT
+        col2: Name:string:30:NOTNULL:Company
+        col3: ParentOrgIdentifier:string:4:NULL:NA
+        col4: ParentOrgName:string:30:NULL:NA
+        col5: TaxIdentifier:string:10:NOTNULL:AUTO_TAX
+        col6: StatusCode:string:10:NOTNULL:FUNC(ACTIVE,TERMED,SUSPENDED)
+        col7: AddressLine1:string:30:NOTNULL:Street_Address
+        col8: AddressLine2:string:30:NULL:NA
+        col9: City:string:40:NOTNULL:City
+        col10: State:string:2:NOTNULL:State
+        col11: Zip:string:10:NOTNULL:Zip_Code
+        col12: Phone:string:12:NULL:Phone_Number
+        col13: Email:string:50:NULL:Email
+        col14: ContactName:string:25:NULL:CONCAT(First_Name,Middle_Initials,Last_Name)
+        col15: RecordCreationDate:timestamp:19:NOTNULL:AUTO_TIMESTAMP
+
